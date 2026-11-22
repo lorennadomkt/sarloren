@@ -1,0 +1,156 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Links sarloren</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap">
+<style>
+/* layout: uma coluna estreita sobre creme com grade de 32px; avatar com estrela, selo girado, botões-cartão de 2px em cores chapadas */
+@font-face { font-family: "BootzyTM"; src: url("fonts/BootzyTM.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+:root {
+  color-scheme: light;
+  --cream: #F6F3EA; --butter-light: #FFFFE1; --ink: #141414; --wine: #A90A06; --wine-deep: #7A0704;
+  --butter: #FDFFC6; --blue: #4A9BE8; --white: #FFFFFF; --grid-line: #14141410;
+  --display: "BootzyTM", Archivo, "Arial Narrow", sans-serif;
+  --body: Archivo, "Helvetica Neue", Arial, sans-serif;
+  --serif: "Instrument Serif", Georgia, serif;
+  --mono: "Space Mono", ui-monospace, Menlo, monospace;
+  --radius-card: 20px; --radius-sm: 16px; --line: 2px; --gap: 16px;
+}
+* { box-sizing: border-box; }
+html, body { background-color: var(--butter-light); }
+body {
+  color: var(--ink); font-family: var(--body); font-stretch: 80%; font-size: 18px; line-height: 1.3;
+  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 32px 32px; min-height: 100%;
+}
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+
+.page {
+  max-width: 480px; margin: 0 auto; position: relative;
+  padding-block: 28px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 28px;
+}
+.mono { font-family: var(--mono); font-stretch: 100%; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; line-height: 1.2; }
+.head { display: flex; justify-content: space-between; gap: 12px; }
+
+/* perfil */
+.perfil { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+.avatar { position: relative; width: 168px; height: 168px; }
+.avatar svg { position: absolute; inset: -18px; width: calc(100% + 36px); height: calc(100% + 36px); fill: var(--butter); stroke: var(--ink); stroke-width: 1.2; animation: gira 40s linear infinite; }
+.avatar .foto { position: absolute; inset: 14px; border: var(--line) solid var(--ink); border-radius: 50%; overflow: hidden; background: var(--wine); }
+.avatar img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 30%; display: block; }
+.nome { display: flex; flex-direction: column; align-items: center; margin-top: 6px; }
+h1 { font-family: var(--display); font-weight: 400; letter-spacing: -0.001em; color: var(--wine); font-size: clamp(48px, 14vw, 72px); line-height: .88; margin: 0; text-wrap: balance; }
+.selo { position: relative; z-index: 1; display: inline-block; border: var(--line) solid var(--ink); border-radius: var(--radius-sm); padding: 4px 12px 6px; font-family: var(--display); font-size: 18px; line-height: 1; letter-spacing: -0.001em; background: var(--butter); rotate: -3deg; margin-top: -14px; margin-left: 36px; white-space: nowrap; }
+.bio { font-family: var(--serif); font-stretch: 100%; font-style: italic; font-size: 22px; line-height: 1.15; margin: 0; max-width: 22em; text-wrap: balance; }
+
+/* links */
+.links { display: flex; flex-direction: column; gap: var(--gap); list-style: none; margin: 0; padding: 0; }
+.lk {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px;
+  min-height: 72px; padding: 14px 18px 14px 20px;
+  border: var(--line) solid var(--ink); border-radius: var(--radius-card); background: var(--white);
+  text-decoration: none; color: var(--ink);
+  transition: transform .2s cubic-bezier(.2,1.6,.4,1), box-shadow .2s ease;
+}
+.lk:hover { transform: rotate(-1.2deg) scale(1.02); box-shadow: 0 6px 0 var(--ink); }
+.lk:active { transform: scale(.98); box-shadow: none; }
+.lk .txt { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.lk strong { font-family: var(--display); font-weight: 400; font-size: 30px; line-height: .95; letter-spacing: -0.001em; }
+.lk strong em { font-family: var(--serif); font-stretch: 100%; font-style: italic; font-size: 22px; white-space: nowrap; }
+.lk .sub { font-size: 16px; line-height: 1.2; }
+.lk .seta { font-family: var(--mono); font-size: 22px; width: 40px; height: 40px; display: grid; place-items: center; border: var(--line) solid var(--ink); border-radius: 50%; background: var(--cream); flex: none; }
+.lk.y { background: var(--butter); } .lk.p { background: var(--wine); color: var(--butter-light); } .lk.b { background: var(--blue); }
+
+/* destaque da publi */
+.publi { position: relative; padding-top: 12px; }
+.publi .tag { position: absolute; top: 0; right: 18px; z-index: 1; background: var(--wine); color: var(--butter-light); border: var(--line) solid var(--ink); border-radius: 10px; padding: 3px 10px; rotate: 3deg; }
+.publi .lk { background: var(--ink); color: var(--butter-light); }
+.publi .lk strong { color: var(--butter-light); }
+.publi .lk .seta { background: var(--butter); color: var(--ink); }
+.publi .lk:hover { box-shadow: 0 6px 0 var(--wine); }
+.big { font-family: var(--display); font-size: 44px; line-height: .9; letter-spacing: -0.001em; color: var(--butter); }
+
+/* e-mail */
+.mail { border: var(--line) dashed var(--ink); border-radius: var(--radius-card); background: var(--white); padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; }
+.mail .end { font-family: var(--mono); font-stretch: 100%; font-size: 15px; word-break: break-all; user-select: all; }
+.mail .acoes { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 16px; border: var(--line) solid var(--ink); border-radius: var(--radius-sm); font-family: var(--mono); font-stretch: 100%; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; text-decoration: none; color: var(--ink); background: var(--butter); cursor: pointer; transition: transform .15s ease, background .15s ease, color .15s ease; }
+.btn:hover { transform: rotate(-1.5deg) scale(1.04); background: var(--wine); color: var(--butter-light); }
+.btn.w { background: var(--white); } .btn.w:hover { background: var(--butter); color: var(--ink); }
+
+.rodape { text-align: center; opacity: .7; }
+.estrela-fundo { position: absolute; pointer-events: none; fill: var(--wine); width: 58px; top: 120px; left: -6px; animation: gira 24s linear infinite reverse; }
+.estrela-fundo.b { fill: var(--blue); width: 44px; top: 70px; left: auto; right: 4px; animation-duration: 30s; animation-direction: normal; }
+@keyframes gira { to { rotate: 360deg; } }
+@media (max-width: 380px) { .lk strong { font-size: 26px; } .big { font-size: 38px; } .estrela-fundo { display: none; } }
+@media (prefers-reduced-motion: reduce) { .avatar svg, .estrela-fundo { animation: none; } * { transition-duration: .01ms !important; } }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><polygon id="estrela" points="50,0 59.2,27.8 85.4,14.6 72.2,40.8 100,50 72.2,59.2 85.4,85.4 59.2,72.2 50,100 40.8,72.2 14.6,85.4 27.8,59.2 0,50 27.8,40.8 14.6,14.6 40.8,27.8"/></defs></svg>
+
+<main class="page">
+  <svg class="estrela-fundo" viewBox="0 0 100 100" aria-hidden="true"><use href="#estrela"/></svg>
+  <svg class="estrela-fundo b" viewBox="0 0 100 100" aria-hidden="true"><use href="#estrela"/></svg>
+
+  <div class="head mono"><span>@sarloren</span><span>links</span></div>
+
+  <header class="perfil">
+    <div class="avatar">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#estrela"/></svg>
+      <div class="foto"><img src="foto-perfil.webp" width="1164" height="1600" alt="Lorenna Sergento"></div>
+    </div>
+    <div class="nome">
+      <h1>lorenna sergento</h1>
+      <span class="selo">social media, design &amp; UGC creator</span>
+    </div>
+    <p class="bio">te ensino a criar conteúdo e mostro a minha rotina enquanto isso ⭐️</p>
+  </header>
+
+  <ul class="links">
+    <li><a class="lk y" href="https://claude.ai/artifact/4zoGrPKzrhgNieL8q6YxH3" target="_blank" rel="noopener">
+      <span class="txt"><strong>meu site <em>| social media</em></strong><span class="sub">quem sou, o que eu faço e como trabalho</span></span><span class="seta" aria-hidden="true">↗</span>
+    </a></li>
+    <li><a class="lk p" href="https://claude.ai/artifact/4zoGrPKzrhgNieL8q6YxH3#contratar" target="_blank" rel="noopener">
+      <span class="txt"><strong>orçar serviços <em>| social media</em></strong><span class="sub">briefing em 3 passos, respondo pelo whatsapp</span></span><span class="seta" aria-hidden="true">→</span>
+    </a></li>
+    <li><a class="lk b" href="https://claude.ai/artifact/4zoGrPKzrhgNieL8q6YxH3#trabalhos" target="_blank" rel="noopener">
+      <span class="txt"><strong>portfólio <em>| social media</em></strong><span class="sub">os trabalhos que já foram pro ar</span></span><span class="seta" aria-hidden="true">↗</span>
+    </a></li>
+    <li class="publi">
+      <span class="tag mono">publi</span>
+      <a class="lk" href="https://lp.oticasprevent.com.br/influencer/?utm_source=Influencer&amp;utm_medium=stories&amp;utm_campaign=sarloren" target="_blank" rel="noopener">
+        <span class="txt"><strong>óticas prevent</strong><span class="big">até 70% off</span><span class="sub">óculos de grau e de sol</span></span><span class="seta" aria-hidden="true">↗</span>
+      </a>
+    </li>
+  </ul>
+
+  <section class="mail" aria-labelledby="mail-t">
+    <span class="mono" id="mail-t">parcerias e publis</span>
+    <span class="end" id="email">lorennasergentougc@gmail.com</span>
+    <div class="acoes">
+      <button class="btn" type="button" id="copiar">copiar e-mail</button>
+      <a class="btn w" href="mailto:lorennasergentougc@gmail.com?subject=Parceria%20com%20%40sarloren">abrir no e-mail</a>
+    </div>
+  </section>
+
+  <p class="rodape mono">feito por lorenna do mkt</p>
+</main>
+
+<script>
+(function () {
+  var b = document.getElementById("copiar");
+  var el = document.getElementById("email");
+  b.addEventListener("click", function () {
+    var t = el.textContent.trim();
+    function sel() { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "selecionado, é só copiar"; }
+    try {
+      navigator.clipboard.writeText(t).then(function () { b.textContent = "copiado"; setTimeout(function () { b.textContent = "copiar e-mail"; }, 1800); }, sel);
+    } catch (e) { sel(); }
+  });
+})();
+</script>
+
+</body></html>
