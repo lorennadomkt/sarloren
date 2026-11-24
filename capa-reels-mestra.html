@@ -7,18 +7,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#2A1B4D;        /* roxo profundo */
-    --bg2:#4B2E83;
+    --bg:#0B1F3F;        /* azul marinho */
+    --bg2:#1B3F73;
     --accent:#F2B84B;    /* dourado */
     --cream:#FFF6E8;
-    --soft:#E9DDFB;
+    --soft:#D6E2F5;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{background:#111;}
   .cover{
     width:1080px;height:1920px;position:relative;overflow:hidden;margin:0 auto;
     background:radial-gradient(900px 900px at 80% 15%, var(--bg2) 0%, transparent 60%),
-               radial-gradient(800px 800px at 10% 90%, #5b3a9c55 0%, transparent 60%),
+               radial-gradient(800px 800px at 10% 90%, #2a5ba855 0%, transparent 60%),
                var(--bg);
     color:var(--cream);font-family:'Inter',sans-serif;
   }
@@ -39,6 +39,8 @@
     color:var(--accent);font-weight:600;font-size:30px;letter-spacing:.14em;text-transform:uppercase;
     margin-bottom:64px;
   }
+  .logo{margin-bottom:28px}
+  .logo img{height:150px;max-width:700px;object-fit:contain}
   .brand{
     font-family:'Playfair Display',serif;font-weight:800;font-size:96px;letter-spacing:.32em;
     color:var(--accent);text-transform:uppercase;margin-bottom:28px;padding-left:.32em;
@@ -67,7 +69,7 @@
 
   <div class="center">
     <div class="badge">Reconhecida pelo MEC</div>
-    <div class="brand">Mestra</div>
+    <div class="logo"><img src="logo-mestra.png" alt="Mestra" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'brand',textContent:'Mestra'}))"></div>
     <h1>Chegou<br>a <em>Mestra.</em></h1>
     <div class="line"></div>
     <div class="sub">Pedagogia que transforma.</div>
