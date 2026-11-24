@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capa Reels Mestra</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#2A1B4D;        /* roxo profundo */
+    --bg2:#4B2E83;
+    --accent:#F2B84B;    /* dourado */
+    --cream:#FFF6E8;
+    --soft:#E9DDFB;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#111;}
+  .cover{
+    width:1080px;height:1920px;position:relative;overflow:hidden;margin:0 auto;
+    background:radial-gradient(900px 900px at 80% 15%, var(--bg2) 0%, transparent 60%),
+               radial-gradient(800px 800px at 10% 90%, #5b3a9c55 0%, transparent 60%),
+               var(--bg);
+    color:var(--cream);font-family:'Inter',sans-serif;
+  }
+  .ring{position:absolute;border-radius:50%;border:2px solid #F2B84B33}
+  .r1{width:900px;height:900px;right:-380px;top:-260px}
+  .r2{width:620px;height:620px;left:-300px;bottom:180px}
+  .dot{position:absolute;border-radius:50%;background:var(--accent)}
+  .d1{width:26px;height:26px;right:140px;top:420px}
+  .d2{width:14px;height:14px;left:120px;top:1180px;opacity:.7}
+
+  /* zona segura central (corte 4:5 do grid): y 330 a 1590 */
+  .center{
+    position:absolute;left:90px;right:90px;top:50%;transform:translateY(-50%);
+    text-align:center;
+  }
+  .badge{
+    display:inline-block;padding:16px 34px;border:2px solid var(--accent);border-radius:999px;
+    color:var(--accent);font-weight:600;font-size:30px;letter-spacing:.14em;text-transform:uppercase;
+    margin-bottom:64px;
+  }
+  .brand{
+    font-family:'Playfair Display',serif;font-weight:800;font-size:96px;letter-spacing:.32em;
+    color:var(--accent);text-transform:uppercase;margin-bottom:28px;padding-left:.32em;
+  }
+  h1{
+    font-family:'Playfair Display',serif;font-weight:800;font-size:196px;line-height:.95;
+    letter-spacing:-.01em;color:var(--cream);
+  }
+  h1 em{font-style:italic;font-weight:600;color:var(--accent)}
+  .line{width:140px;height:6px;background:var(--accent);border-radius:3px;margin:64px auto}
+  .sub{
+    font-family:'Playfair Display',serif;font-style:italic;font-weight:600;
+    font-size:64px;color:var(--soft);
+  }
+  .foot{
+    position:absolute;left:0;right:0;bottom:430px;text-align:center;
+    font-size:34px;color:var(--soft);letter-spacing:.04em;
+  }
+  .foot b{color:var(--accent);font-weight:600}
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="ring r1"></div><div class="ring r2"></div>
+  <div class="dot d1"></div><div class="dot d2"></div>
+
+  <div class="center">
+    <div class="badge">Reconhecida pelo MEC</div>
+    <div class="brand">Mestra</div>
+    <h1>Chegou<br>a <em>Mestra.</em></h1>
+    <div class="line"></div>
+    <div class="sub">Pedagogia que transforma.</div>
+  </div>
+
+  <div class="foot">Primeira turma: <b>20 a 30 vagas</b></div>
+</div>
+</body>
+</html>
